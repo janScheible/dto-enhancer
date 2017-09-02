@@ -53,7 +53,7 @@ public abstract class AbstractDtoEnhancerMojo extends AbstractMojo {
                 getLog().info(new String(byteArrayOutputStream.toByteArray(), StandardCharsets.UTF_8));
 
                 if (verificationOnly && changed) {
-                    throw new MojoExecutionException("Some DTOs need an update...");
+                    throw new MojoFailureException ("Some DTOs need an update...");
                 }
             } catch (Exception ex) {
                 throw new MojoExecutionException("Unable to enhance DTOs", ex);

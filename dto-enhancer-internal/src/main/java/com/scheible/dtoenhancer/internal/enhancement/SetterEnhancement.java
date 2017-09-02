@@ -18,6 +18,6 @@ class SetterEnhancement {
         String capitalizedFieldName = Character.toUpperCase(field.getName().charAt(0)) + field.getName().substring(1);
 
         return new MethodEnhancement("set" + capitalizedFieldName, ImmutableList.of(new SimpleImmutableEntry<>(field.getName(), JavaSourceHelper.getFieldSimpleNameWithGenerics(field))), Optional.empty(),
-                "this." + field.getName() + " = " + field.getName() + ";", ImmutableSet.of(), mandatoryFinal);
+                false, "this." + field.getName() + " = " + field.getName() + ";", ImmutableSet.of(), mandatoryFinal);
     }
 }

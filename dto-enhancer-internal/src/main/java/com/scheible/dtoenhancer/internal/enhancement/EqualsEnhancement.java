@@ -43,6 +43,6 @@ class EqualsEnhancement {
                 .append("return false;").append("\n");
 
         return new MethodEnhancement("equals", ImmutableList.of(new SimpleImmutableEntry<>("obj", "Object")), Optional.<String>of("boolean"),
-                body.toString(), ImmutableSet.of(Objects.class.getName()), mandatoryFinal);
+                true, body.toString(), ImmutableSet.of(Objects.class.getName()), mandatoryFinal);
     }
 }

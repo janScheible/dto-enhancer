@@ -23,6 +23,6 @@ class HashCodeEnhancement {
                 .append(");");
         
         return new MethodEnhancement("hashCode", ImmutableList.of(), Optional.<String>of("int"),
-                body.toString(), ImmutableSet.of(Objects.class.getName()), mandatoryFinal);
+                true, body.toString(), ImmutableSet.of(Objects.class.getName()), mandatoryFinal);
     }
 }

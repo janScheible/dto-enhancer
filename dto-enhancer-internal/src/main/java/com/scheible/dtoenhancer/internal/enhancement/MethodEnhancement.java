@@ -22,15 +22,17 @@ public class MethodEnhancement {
     private final String methodName;
     private final ImmutableList<Map.Entry<String, String>> params;
     private final String returnType;
+    private final boolean overridenMethod;
     private final String enhancedBody;
     private final ImmutableSet<String> requiredImports;
     private final boolean mandatoryFinal;
 
     MethodEnhancement(String methodName, ImmutableList<Map.Entry<String, String>> params, Optional<String> returnType,
-            String enhancedBody, ImmutableSet<String> requiredImports, boolean mandatoryFinal) {
+            boolean overridenMethod, String enhancedBody, ImmutableSet<String> requiredImports, boolean mandatoryFinal) {
         this.methodName = methodName;
         this.params = params;
         this.returnType = returnType.map(Function.identity()).orElse("void");
+        this.overridenMethod = overridenMethod;
         this.enhancedBody = enhancedBody;
         this.requiredImports = requiredImports;
         this.mandatoryFinal = mandatoryFinal;
@@ -75,6 +77,9 @@ public class MethodEnhancement {
             method = javaClassSource.addMethod()
                     .setPublic().setName(methodName).setBody(enhancedBody)
                     .setReturnType(returnType);
+            if(overridenMethod) {
+                method.addAnnotation("Override");
+            }
             setMethodParams(method, mandatoryFinal);
             changed = true;
         }

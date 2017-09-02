@@ -12,7 +12,7 @@
     <artifactId>dto-enhancer-maven-plugin</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
-    <packaging>jar</packaging>
+    <packaging>maven-plugin</packaging>
     <name>com.scheible.dto-enhancer:maven-plugin</name>
 
     <dependencies>
@@ -63,9 +63,13 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
+                <version>3.5</version>
                 <executions>
+                    <execution>
+                        <id>default-descriptor</id>
+                        <phase>process-classes</phase>
+                    </execution>
                     <execution>
                         <id>help-goal</id>
                         <goals>
@@ -73,11 +77,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <extractors>
-                        <extractor>java-annotations</extractor>
-                    </extractors>
-                </configuration>
             </plugin>
         </plugins>
     </build>

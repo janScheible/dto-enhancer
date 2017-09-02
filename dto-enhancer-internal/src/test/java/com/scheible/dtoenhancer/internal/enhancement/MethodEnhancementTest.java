@@ -25,7 +25,7 @@ public class MethodEnhancementTest {
         String fieldSimpleNameWithGenerics = field.getType().getSimpleName() + field.getType().getQualifiedNameWithGenerics().substring(field.getType().getQualifiedName().length());
                         
         MethodEnhancement methodEnhancement = new MethodEnhancement("test2", 
-                ImmutableList.of(new AbstractMap.SimpleImmutableEntry<>(field.getName(), fieldSimpleNameWithGenerics)), Optional.empty(), "", ImmutableSet.of(), false);
+                ImmutableList.of(new AbstractMap.SimpleImmutableEntry<>(field.getName(), fieldSimpleNameWithGenerics)), Optional.empty(), false, "", ImmutableSet.of(), false);
         methodEnhancement.apply(javaClassSource);
         System.out.println(javaClassSource);
     }

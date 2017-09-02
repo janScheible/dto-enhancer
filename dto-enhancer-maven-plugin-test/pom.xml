@@ -24,6 +24,14 @@
                 <groupId>com.scheible.dtoenhancer.maven</groupId>
                 <artifactId>dto-enhancer-maven-plugin</artifactId>
                 <version>0.1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>

@@ -18,6 +18,6 @@ class GetterEnhancement {
         String capitalizedFieldName = Character.toUpperCase(field.getName().charAt(0)) + field.getName().substring(1);
 
         return new MethodEnhancement("get" + capitalizedFieldName, ImmutableList.of(), Optional.<String>of(JavaSourceHelper.getFieldSimpleNameWithGenerics(field)),
-                "return " + thisToken + field.getName() + ";", ImmutableSet.of(), mandatoryFinal);
+                false, "return " + thisToken + field.getName() + ";", ImmutableSet.of(), mandatoryFinal);
     }
 }
