@@ -14,4 +14,16 @@
 
     <packaging>jar</packaging>
     <name>com.scheible.dto-enhancer:api</name>
+
+    <url>https://github.com/janScheible/dto-enhancer</url>
+
+    <developers>
+        <developer>
+            <name>Jan Scheible</name>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>https://github.com/janScheible/dto-enhancer.git</connection>
+    </scm>
 </project>

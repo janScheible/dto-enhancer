@@ -32,6 +32,10 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <mandatoryThis>false</mandatoryThis>
+                    <mandatoryFinal>false</mandatoryFinal>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
