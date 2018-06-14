@@ -1,5 +1,4 @@
-[![Release](https://jitpack.io/v/User/Repo.svg)]
-(https://jitpack.io/#janScheible/dto-enhancer)
+[![Release](https://jitpack.io/v/janScheible/dto-enhancer.svg)](https://jitpack.io/#janScheible/dto-enhancer)
 
 # dto-enhancer
 
