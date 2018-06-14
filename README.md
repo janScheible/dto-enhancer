@@ -1,3 +1,6 @@
+[![Release](https://jitpack.io/v/User/Repo.svg)]
+(https://jitpack.io/#janScheible/dto-enhancer)
+
 # dto-enhancer
 
 Inspired by the awesome [@AutoValue](https://github.com/google/auto/tree/master/value) but target to simple data transfer objects (DTOs) instead of value types.
