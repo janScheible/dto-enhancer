@@ -5,12 +5,12 @@
     <parent>
         <artifactId>dto-enhancer</artifactId>
         <groupId>com.scheible.dtoenhancer</groupId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <groupId>com.scheible.dtoenhancer.api</groupId>
     <artifactId>dto-enhancer-api</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <packaging>jar</packaging>
     <name>com.scheible.dto-enhancer:api</name>

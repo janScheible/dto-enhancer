@@ -4,7 +4,7 @@
 
     <groupId>com.scheible.dtoenhancer</groupId>
     <artifactId>dto-enhancer</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>com.scheible:dto-enhancer</name>
 
